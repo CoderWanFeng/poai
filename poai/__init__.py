@@ -8,6 +8,7 @@
 '''
 from poai.api import chatgpt
 from poai.api import aiart
+from poai.api import chat
 # from poai.lib.Const import SPLIT_LINE
 #
 # print(SPLIT_LINE)
