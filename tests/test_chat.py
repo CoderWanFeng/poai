@@ -9,11 +9,16 @@
 import os
 import unittest
 
-from poai.api.chat import ali
+from poai.api.chat import *
 
 
 class TestTools(unittest.TestCase):
-    def test_chat(self):
+    def test_ali(self):
         # 替换为你的API密钥
         api_key = os.getenv("TY_KEY")  # 此处填入你的api-key
         print(ali(api_key, prompt='你好'))
+
+    def test_zhipu(self):
+        # 替换为你的API密钥
+        api_key = ''  # 此处填入你的api-key
+        print(zhipu(api_key))

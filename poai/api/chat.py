@@ -7,8 +7,14 @@
 @本段代码的视频说明     ：
 '''
 from poai.core.TongYi import Tongyi
+from poai.core.ZhiPu import get_response
 
 
 def ali(api_key: str, prompt: str):
     ty = Tongyi(api_key=api_key)
     return ty.qianwen_max(prompt)
+
+
+def zhipu(api_key, prompt='你好，请介绍一下python-office', model="glm-4"):
+    # https://open.bigmodel.cn/dev/api#overview
+    return get_response(api_key, prompt, model)
