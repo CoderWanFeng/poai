@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 '''
-@学习网站      ：www.python-office.com
+@学习网站      ：https://www.python-office.com
 @读者群     ：http://www.python4office.cn/wechat-group/
 @作者  ：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫，微信：CoderWanFeng
 @代码日期    ：2024/1/20 0:17 
@@ -22,3 +22,6 @@ class TestTools(unittest.TestCase):
         # 替换为你的API密钥
         api_key = ''  # 此处填入你的api-key
         print(zhipu(api_key))
+
+    def test_deepseek(self):
+        print(deepseek(api_key='sk-pRdhASKn0wm5i7DjkdDfj5ENbRcpsqGrtV7hdFZZ6laV5aMk', content='你好'))
