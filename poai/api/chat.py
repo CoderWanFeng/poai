@@ -10,7 +10,8 @@
 from poai.core.DeepSeek import get_response_from_deepseek_in_tx
 from poai.core.TongYi import Tongyi
 from poai.core.ZhiPu import get_response
-
+from poai.core.moonshot import moonshot
+ 
 
 def ali(api_key: str, prompt: str):
     """
@@ -31,4 +32,8 @@ def zhipu(api_key, prompt='你好，请介绍一下python-office', model="glm-4"
 def deepseek(api_key, content, origin=False, tx=True):
     if tx:
         return get_response_from_deepseek_in_tx(api_key, content)
+    
+
+def moonshot(api_key,content):
+    yield moonshot(api_key,content)
 

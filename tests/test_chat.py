@@ -25,3 +25,9 @@ class TestTools(unittest.TestCase):
 
     def test_deepseek(self):
         print(deepseek(api_key='sk-pRdhASKn0wm5i7DjkdDfj5ENbRcpsqGrtV7hdFZZ6laV5aMk', content='你好'))
+
+    def test_moonshot(self):
+        api_key="sk-T2IKpzIxq14olNI1nJti9RZ3xcPE1G0ycumKNg7IBreLtgDw"
+        comtent="夏天推荐吃什么水果？"
+        for chunk in moonshot(api_key,comtent)
+            print(chunk,end="")
