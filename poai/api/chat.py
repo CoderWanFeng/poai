@@ -35,5 +35,5 @@ def deepseek(api_key, content, origin=False, tx=True):
     
 
 def moonshot(api_key,content):
-    yield moonshot(api_key,content)
+    yield moonshot(api_key,content) 
 
