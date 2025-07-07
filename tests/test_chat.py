@@ -28,6 +28,5 @@ class TestTools(unittest.TestCase):
 
     def test_moonshot(self):
         api_key="sk-T2IKpzIxq14olNI1nJti9RZ3xcPE1G0ycumKNg7IBreLtgDw"
-        comtent="夏天推荐吃什么水果？"
-        for chunk in moonshot(api_key,comtent):
-            print(chunk,end="")
+        content="你是什么名字"
+        print(moonshot(api_key,content))

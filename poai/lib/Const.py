@@ -7,5 +7,6 @@
 @Description     ：
 '''
 
-
 SPLIT_LINE = '=' * 30
+
+moonshot_url = "https://api.moonshot.cn/v1"

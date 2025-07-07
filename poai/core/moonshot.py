@@ -1,24 +1,22 @@
 from openai import OpenAI
 
+from poai.lib.Const import moonshot_url
 
-def moonshot(api_key, content):
+
+def moonshot_core(api_key, content, model,prompt):
     client = OpenAI(
-        # api_key="sk-T2IKpzIxq14olNI1nJti9RZ3xcPE1G0ycumKNg7IBreLtgDw",
-        base_url="https://api.moonshot.cn/v1",
-        api_key=api_key,
-
+        # api_key="sk-T2IKpzIxq14olNI1nJti9RZ3xcPE1G0ycumKNg7Iconda infoBreLtgDw",
+        base_url=moonshot_url,
+        api_key=api_key
     )
 
     completion = client.chat.completions.create(
-        model="moonshot-v1-8k",
+        model=model,
         messages=[
-            {"role": "system",
-             "content": "你的名字是：小A。你的回答总是极为简洁，如果用户向你提问，你只需要回答答案即可"},
-            # {"role": "user", "content": "为什么夏天的西瓜会便宜？"}
+            {"role": "system","content": prompt},
             {"role": "user", "content": content}
-        ],
-        stream=True #流式调用
+        ]
+
     )
-    for chunk in completion:
-        yield chunk.choices[0].delta.content # 流式输出
-    # print(completion.choices[0].message.content)
+    return completion.choices[0].message.content
+# TODO：
